@@ -1,0 +1,116 @@
+<html>
+
+<head>
+
+<style>
+
+body
+{
+background-color:black;
+color:white;
+}
+
+input
+{
+border:blue solid 3px;
+border-radius:30px;
+width :80%;
+}
+ 
+input:hover
+{
+box-shadow: 0 0 10px 5px blue;
+}
+
+</style>
+
+</head>
+
+<body>
+<h1 id="head">Grade Calculator Using (JavaScript) </h1>
+<br>
+<br>
+
+<div id="input_box">
+<input type="number" id="m1" placeholder="enter the valid mark "><br><br>
+<input type="number" id="m2" placeholder="enter the valid mark "><br><br>
+<input type="number" id="m3" placeholder="enter the valid mark "><br><br>
+<input type="number" id="m4" placeholder="enter the valid mark "><br><br>
+<input type="number" id="m5" placeholder="enter the valid mark "><br><br>
+<button id="initiate" onclick="load()">Calculate</button>
+<br>
+<br>
+<h1 id="result_head">Result<h1>
+<br>
+<br>
+<h3 id="load_result">Loading....</h3>
+</div>
+
+<script>
+
+function load()
+{
+let m1=Number(document.getElementById("m1").value);
+m1+=Number(document.getElementById("m2").value);
+m1+=Number(document.getElementById("m3").value);
+m1+=Number(document.getElementById("m4").value);
+m1+=Number(document.getElementById("m5").value);
+
+if(true)
+{
+
+m1=m1/5;
+
+let result="";
+if(m1>=90)
+{
+result="Your grade is A";
+document.getElementById("load_result").style.color="green";
+}
+else if(m1>=80)
+{
+result="Your grade is B";
+document.getElementById("load_result").style.color="lime";
+}
+else if(m1>=65)
+{
+result="Your grade is C";
+document.getElementById("load_result").style.color="pink";
+}
+else if(m1>=45)
+{
+result="Your grade is D";
+document.getElementById("load_result").style.color="orange";
+}
+
+else
+{
+result="You are failed";
+document.getElementById("load_result").style.color="red";
+}
+
+if(result!="You are failed")
+{
+alert("Congras you do a great job");
+document.getElementById("load_result").textContent=result;
+}
+else
+{
+alert("Sorry you are fail");
+document.getElementById("load_result").textContent=result;
+}
+
+}
+
+else
+{
+alert("Enter the valid mark")
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
